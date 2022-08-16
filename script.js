@@ -17,7 +17,7 @@ var getNumChar = function() {
       lowerCaseChar : window.confirm("Would you like to include lowercase characters? (Must select OK for atleast one of the four character types)"),
       upperCaseChar : window.confirm("Would you like to include uppercase characters? (Must select OK for atleast one of the four character types)"),
       numericChar : window.confirm("Would you like to include numeric characters? (Must select OK for atleast one of the four character types)"),
-      specialChar : window.confirm("Would you like to include numeric characters? (Must select OK for atleast one of the four character types)")
+      specialChar : window.confirm("Would you like to include special characters? (Must select OK for atleast one of the four character types)")
     }
     while (!charInput.lowerCaseChar && !charInput.upperCaseChar && !charInput.numericChar && !charInput.specialChar) {
       window.alert("You must select OK for atleast one of the character types. Try again!")
