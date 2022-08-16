@@ -1,4 +1,6 @@
 // Assignment code here
+
+// Funtion for getting length input, returns a number, called in userInput object definition
 var getNumChar = function() {
     var lenInput = window.prompt("Enter password length (integer [8-128])");
     while (lenInput < 8 || lenInput > 128) {
@@ -8,6 +10,8 @@ var getNumChar = function() {
     return Number(lenInput);
  } 
 
+ // Function for getting character choices, returns object of boolean values
+ // called in userInput object definition
  var getCharChoices = function() {
     var charInput = {
       lowerCaseChar : window.confirm("Would you like to include lowercase characters? (Must select OK for atleast one of the four character types)"),
@@ -15,7 +19,7 @@ var getNumChar = function() {
       numericChar : window.confirm("Would you like to include numeric characters? (Must select OK for atleast one of the four character types)"),
       specialChar : window.confirm("Would you like to include numeric characters? (Must select OK for atleast one of the four character types)")
     }
-    while (charInput.lowerCaseChar == false && charInput.upperCaseChar==false && charInput.numericChar==false && charInput.specialChar==false) {
+    while (!charInput.lowerCaseChar && !charInput.upperCaseChar && !charInput.numericChar && !charInput.specialChar) {
       window.alert("You must select OK for atleast one of the character types. Try again!")
       charInput.lowerCaseChar = window.confirm("Would you like to include lowercase characters? (Must select OK for atleast one of the four character types)"),
       charInput.upperCaseChar = window.confirm("Would you like to include uppercase characters? (Must select OK for atleast one of the four character types)"),
@@ -42,10 +46,6 @@ function generatePassword() {
         'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   const numChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   const specChars = ['!', '@', '#', '$', '%', '^', '&', '*'];
-  
-  //concat() joins arrays without changing original arrays
-  //push() adds string to the end of an array
-  //array.join("") will form one string out of the elements of array without any seperation
   
   
   //Get User Input
